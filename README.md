@@ -110,27 +110,33 @@ SQL is no longer exploratory—it serves as the decision engine, producing tacti
 
 Excel is used to model business impact of interventions and forecast revenue lift based on SQL-derived targeting logic.
 
-| Objective                        | Excel Use Case                                                                          |
-|----------------------------------|------------------------------------------------------------------------------------------|
-| Loyalty Uplift Forecasting       | Project revenue increase from 0.06% → 1–2% loyal user base                              |
-| Cart Recovery ROI Modeling       | Simulate impact of recovering 20–30% of abandoned carts                                 |
-| Wishlist Activation Forecasting  | Project conversion value from activating top 10% favorited SKUs                         |
-| SKU Monetization Scenario        | Track impact of converting “high attention but unsold” products                         |
-| Campaign Cost-Benefit Modeling   | Compare time-based campaign conversion effectiveness and cost efficiency                |
+| Problem Area                     | Observed Metric / Gap                       | Industry Expectation / Opportunity         |
+| -------------------------------- | ------------------------------------------- | ------------------------------------------ |
+| High Cart Abandonment            | 18440+ carts abandoned  → low recovery rate   |11440 carts have recovery potential out of which 20-30% can be converted  Recovery campaigns can yield ₹2–6L gain    |
+| Ineffective Wishlist Conversion  | Wishlist SKUs show 93% inactivity           | Activation of top 10% = ₹5L+ opportunity   |
+| Loyalty User Shortfall           | Only 0.08% users loyal → below 1% threshold | Strategic push to 1–2% = 231% uplift       |
+| Hour-Level Inefficiency          | Non-optimized campaign timing               | ROI peaks in 6–11AM & 9PM–5AM              |
+| Latency Friction in Conversions  | Avg. Time to Convert \~14.9 hrs             | Goal: Reduce by 20–40% via segmenting      |
+| SKU Attention Without Conversion | High views/favorites, low buys              | Targeted SKU monetization opportunities    |
+| Cohort Retention Drop-Off        | Sharp decay post-week 2                     | Retention uplift via time-sensitive nudges |
 
----
+### C. Power BI – Executive Visibility & Strategic Impact Dashboards
 
-### C. Power BI – Real-Time Visibility & Performance Monitoring
+Power BI enables real-time performance monitoring, scenario-based forecasting, and behavioral deep dives using SQL output views and Excel-based simulation layers. Each dashboard is tailored to isolate key revenue and retention gaps while offering actionable clarity for marketing, product, and CRM teams.
 
-Power BI provides executive visibility into funnel performance post-intervention, using data flows connected to SQL outputs and Excel models.
-
-| Objective                        | BI Dashboard Modules                                                                    |
-|----------------------------------|------------------------------------------------------------------------------------------|
-| Funnel Progression Dashboard     | Real-time drop-off tracking by segment (View → Favorite → Cart → Purchase)              |
-| SKU Performance Matrix           | Visual mapping of product tiers by conversion and engagement                            |
-| Retention & Cohort Heatmaps      | Day/week cohort tracking by user segment and purchase behavior                          |
-| Latency Distributions            | Purchase timing analysis by segment, product, and hour                                  |
-| Campaign Readiness & Eligibility | Visual trackers of user counts meeting SQL flag logic (loyalty, cart, etc.)             |
+| **Dashboard Title**                                                             | **Purpose / Business Objective**                                                                 |
+|----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| **Ecommerce Funnel Overview**                                                   | Holistic funnel leakage view from views → conversions, with segmentation filters                 |
+| **Ecommerce User Behavior & Conversion Intelligence**                           | Deep user segmentation by action type, frequency, and conversion history                         |
+| **Boosting Checkout: Cart Recovery Strategy**                                   | Visualize revenue leakage via abandoned carts and simulate impact of recovery campaigns          |
+| **Revenue Uplift Strategy – High-Impact SKUs**                                  | Monetization insights from highly viewed/favorited but under-converting SKUs                    |
+| **SKU Monetization Strategy: Conversion Lift & Focused Targeting**             | Drilldown on SKU attention vs. conversion lag for targeted monetization                         |
+| **Retention Uplift Strategy – Daily Cohort Performance**                        | Retention decay curves across cohorts with improvement tracking scenarios                        |
+| **User Loyalty Segmentation & Revenue Forecasting**                             | Maps loyalty tiers and forecasts potential revenue from loyalty-based campaigns                 |
+| **Campaign Simulation: Gold/Silver User Patterns & Scenarios**                  | Behavior-based targeting and campaign personalization for loyal vs. occasional users             |
+| **Simulated Campaign Impact on Latency & Conversion Speed**                     | Benchmarks speed of conversion under campaign vs. organic segments                              |
+| **Strategic Campaign Simulation: Wishlist-to-Cart Revenue Lift**                | Projected gains from converting inactive wishlist actions into carts                             |
+| **Wishlist SKU Conversion Forecasting**                                         | Conversion and revenue projections under Conservative, Benchmark, and Best-Case assumptions     |
 
 ---
 
@@ -141,4 +147,5 @@ This phase transforms insights into data products and execution logic. Segmentat
 - **SQL** → Materialized views and targeting pipelines  
 - **Excel** → Strategic simulations for prioritization and investment  
 - **Power BI** → Communication layer for monitoring, buy-in, and decision cadence
+
 
